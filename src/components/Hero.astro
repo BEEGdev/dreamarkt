@@ -1,4 +1,9 @@
-<div
+---
+import { Image } from "astro:assets";
+import dreamarktLogo from "../assets/dreamarkt_logo.png";
+---
+
+<section id="hero"
     class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 items-center p-12 lg:p-8 h-screen text-white text-4xl lg:text-6xl"
 >
     <div class="flex flex-col lg:gap-20 lg:p-8 h-full justify-center ">
@@ -14,10 +19,14 @@
 
     </div>
     <div class="flex flex-col gap-15 lg:gap-20 h-full justify-center items-center rounded-lg">
-        <img
-            src="src/assets/dreamarkt-logo.png"
+        <Image
+            src={dreamarktLogo}
             alt="Dreamarkt Logo"
-            class="size-35 lg:size-80"
+            class="size-35 lg:w-80 h-auto"
+            loading="eager"
+            decoding="sync"
+            format="webp"
+
         />
         <h class="font-bold lg:p-10 ">
             DreaMarkt
@@ -25,4 +34,4 @@
     </div>
 
     <span class="hidden lg:flex font-bold text-white text-8xl animate-bounce absolute self-baseline-last justify-self-center" role="img">↓</span>
-</div>
+</section>

@@ -1,9 +1,17 @@
+---
+import { Image } from "astro:assets";
+import dreamarktLogo from "../assets/dreamarkt_logo.png";
+---
+
 <nav class="px-9 py-6 lg:p-8 flex flex-row justify-between items-center w-full relative lg:fixed bg-gray-900/20">
     <div class="flex flex-row gap-6">
-        <img
-            src="src/assets/dreamarkt-logo.png"
+        <Image
+            src={dreamarktLogo}
             alt="Dreamarkt Logo"
             class="size-8"
+            loading="eager"
+            decoding="sync"
+            format="webp"
         />
         <span class="hidden lg:flex text-white text-3xl font-bold self-start">
             DreaMarkt

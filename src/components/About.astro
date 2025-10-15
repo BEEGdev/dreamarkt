@@ -1,7 +1,11 @@
-<div class="flex flex-col justify-center items-center gap-30 lg:-mt-35 bg-gradient-to-b from-transparent via-purple-600/25 via-70% to-transparent h-screen">
+---
+import { Image } from "astro:assets";
+import dreamarktLogo from "../assets/dreamarkt_logo.png";
+---
+<div class="flex flex-col justify-center items-center gap-30 lg:-mt-35 bg-gradient-to-b from-transparent via-purple-600/25 via-70% to-transparent lg:h-screen">
     <div class="flex flex-col gap-20 lg:gap-4 lg:grid lg:grid-cols-2 mx-auto max-w-[1300px]">
         <div
-            class="flex flex-col items-center gap-10 bg-white lg:drop-shadow-blue-400 lg:drop-shadow-xl p-8 lg:p-20 lg:rounded-lg font-semibold text-gray-900 text-xl lg:text-2xl text-center lg:text-justify"
+            class="flex flex-col items-center gap-10 bg-white lg:shadow-blue-400 lg:shadow-lg p-8 lg:p-20 lg:rounded-lg font-semibold text-gray-900 text-xl lg:text-2xl text-center lg:text-justify"
         >
             <p class="">
                 Desarrollamos estrategias de marketing local medibles y
@@ -10,10 +14,11 @@
                 mejores herramientas de análisis de mercado para entender a tus
                 clientes y medir el impacto real de cada acción.
             </p>
-            <img
-                src="src/assets/dreamarkt-logo.png"
+            <Image
+                src={dreamarktLogo}
                 alt="Dreamarkt Logo"
                 class="size-18"
+                format="webp"
             />
         </div>
         <div

@@ -1,34 +1,45 @@
-<div class="flex flex-col justify-center items-center gap-0">
+---
+import { Image } from "astro:assets";
+import diseño from "../assets/diseño.svg";
+import redes from "../assets/redes.svg";
+import web_dev from "../assets/web_dev.svg";
+import seoLocal from "../assets/seo_local.jpg";
+---
+
+<div class="flex flex-col justify-center items-center gap-0 h-full">
     <h2 class="text-white font-bold text-5xl text-center my-20">
-        Posicionamiento web
+        Posicionamiento web y presencia de marca
     </h2>
-    <div class="grid grid-cols-[2fr_1fr] m-auto h-full cursor-pointer">
-        <div class="relative rounded-r-lg overflow-hidden group h-[500px]">
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:m-auto h-full cursor-pointer lg:gap-y-7">
+        <article class="relative rounded-r-lg overflow-hidden group col-span-2 ">
             <!-- Imagen de fondo con filtro hover -->
-            <div class="absolute inset-0 bg-[url('src/assets/seo_local.jpg')] bg-cover bg-center transition-all duration-300 ease-in-out group-hover:grayscale">
-            </div>
+            <Image 
+                src={seoLocal} 
+                alt="" 
+                role="presentation"
+                format="webp"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:grayscale"
+            />
 
             <!-- Contenido por encima de la imagen -->
-            <div class="relative flex flex-col justify-between z-10 h-full bg-black/50 p-8 cursor-pointer">
+            <div class="relative flex flex-col justify-around lg:justify-between z-10 h-full bg-black/50 p-8 cursor-pointer">
                 <div class="flex flex-col gap-8">
-                    <h3 class="text-[#0080ff] font-bold text-6xl">
+                    <h3 class="text-white font-bold text-4xl lg:text-6xl text-center lg:text-left">
                         SEO Local
                     </h3>
-                    <p class="text-white text-2xl text-justify w-1/2">
+                    <p class="text-white text-xl lg;:text-2xl text-center lg:text-justify lg:w-1/2">
                         Hacemos que los clientes de tu ciudad te encuentren.
                         Posicionamos tu negocio en Google Maps, gestionamos
                         tus reseñas y atraemos tráfico de calidad a tu
                         puerta.
                     </p>
                 </div>
-                <div class="text-white text-3xl self-baseline-last m-4">
-                    <span class="font-semibold">
-                        Descubre tu pontencial local
-                        <span class="p-2 px-3 group-hover:bg-green-600/90 transition-all duration-300 rounded-xl ease-in-out">(Análisis Gratuíto)</span>
+                    <span 
+                    class="text-white text-center lg:text-left lg:text-3xl self-center lg:self-baseline-last m-4 flex flex-col lg:flex-row bg-green-600/80 group-hover:bg-green-500/80 rounded-lg p-3 px-6 transition-all duration-300 ease-in-out">
+                    Descubre tu pontencial local (Análisis Gratuíto)
                     </span>
-                </div>
             </div>
-        </div>
+        </article>
 
         <div class="flex flex-col gap-0">
             <div class="cursor-pointer p-8 h-full flex flex-col gap-8  bg-[#1a237e] group hover:bg-[#303f9f] transition-all duration-300 relative">                
@@ -47,6 +58,29 @@
                 </p>
             </div>
         </div> 
+        <div class="col-span-full lg:grid grid-cols-3">
+            <div class="text-center p-10 mx-4 my-10 lg:m-10 flex flex-col items-center rounded-2xl gap-9 shadow-lg transition hover:bg-[#243b7c] shadow-black/50">
+                <Image src={diseño} format="webp" alt="Icono de Diseño de marca" class="size-37 text-blue-400"/>
+                <h3 class="text-white text-3xl font-semibold">Diseño de Marca</h3>
+                <p class="text-blue-100 text-xl max-w-md">Creamos identidades de marca memorables que conectan con tu audiencia y transmiten tus valores.</p>
+            </div>
+    
+            <div class="text-center p-10 mx-4 my-10 lg:m-10 flex flex-col items-center rounded-2xl gap-9 shadow-lg transition hover:bg-[#243b7c] shadow-black/50">
+                <Image src={web_dev} format="webp" alt="Icono de Diseño web" class="size-37 text-blue-400"/>
+                <h3 class="text-white text-3xl font-semibold">Diseño Web</h3>
+                <p class="text-blue-100 text-xl max-w-md">Desarrollamos sitios web atractivos, funcionales y optimizados para convertir curiosos en clientes.</p>
+            </div>
+    
+            <div class="text-center p-10 mx-4 my-10 lg:m-10 flex flex-col items-center rounded-2xl gap-9 shadow-lg transition hover:bg-[#243b7c] shadow-black/50">
+                <Image src={redes} format="webp" alt=" Icono de Redes sociales" class="size-37 text-blue-400"/>
+                <h3 class="text-white text-3xl font-semibold">Redes Sociales</h3>
+                <p class="text-blue-100 text-xl max-w-md">Gestionamos tus redes para conectar con tu audiencia objetivo en A Coruña y Galicia.</p>
+            </div>
+        </div>
+
+        
+
+        
     </div>
 
     
